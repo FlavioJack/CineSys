@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class Hall{
     int hallNumber;
     int capacity;
-    ArrayList<Seat> seats;
+    private ArrayList<Seat> seats;
 
     public Hall(int hallNumber, int rows, int columns){
         this.hallNumber = hallNumber;
