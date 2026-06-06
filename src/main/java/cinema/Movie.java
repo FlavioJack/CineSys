@@ -36,7 +36,7 @@ public class Movie{
     @Override
     public String toString(){
         return "Film: " + getTitle() + 
-                "Genere: " + getGenre() + 
-                "Durata: " + getDuration().toMinutes() + " minuti.";
+                ", Genere: " + getGenre() + 
+                ", Durata: " + getDuration().toMinutes() + " minuti.";
     }
 }
