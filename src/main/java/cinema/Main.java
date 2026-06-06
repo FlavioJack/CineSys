@@ -9,9 +9,8 @@ public class Main{
         Movie film2 = new Movie("Toy Story 5", Duration.ofMinutes(102), Genre.ANIMATION);
         Movie film3 = new Movie("Supergirl", Duration.ofMinutes(110), Genre.ACTION);
 
-        // Generate seat
-        Seat seat1 = new Seat("1", "A", "1");
-        
+        Hall hall1 = new Hall(1, 5, 5);
+        hall1.showSeats();
 
 
     }

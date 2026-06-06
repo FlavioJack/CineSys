@@ -33,8 +33,8 @@ public class Seat{
     }
 
     public String toString(){
-        return "Row " + getRow() + 
-                ", Seat number " + getColumn() + ".";
+        return "Row: " + getRow() + 
+                " Seat: " + getColumn();
     }
 
 
