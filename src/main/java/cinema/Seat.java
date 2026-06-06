@@ -2,10 +2,10 @@ package cinema;
 
 public class Seat{
     String seatId;
-    String row;
-    String column;
+    int column;
+    char row;
 
-    public Seat(String seatId, String row, String column){
+    public Seat(String seatId, char row, int column){
         this.seatId = seatId;
         this.row = row;
         this.column = column;
@@ -18,17 +18,17 @@ public class Seat{
         this.seatId = id;
     }
 
-    public String getRow(){
+    public char getRow(){
         return this.row;
     }
-    public void setRow(String row){
+    public void setRow(char row){
         this.row = row;
     }
 
-    public String getColumn(){
+    public int getColumn(){
         return this.column;
     }
-    public void setColumn(String column){
+    public void setColumn(int column){
         this.column = column;
     }
 
