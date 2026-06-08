@@ -14,7 +14,7 @@ public class Hall{
         for(int i=0; i<rows; i++){
             char r = (char)(i+65); 
             for(int j=1; j<=columns; j++){
-                seats.add(new Seat(""+r+j, r, j)); // 65 to 90 of ascii
+                seats.add(new Seat(r, j)); // 65 to 90 of ascii
             }
         }
     }
