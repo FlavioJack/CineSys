@@ -19,6 +19,10 @@ public class Ticket{
         this.validationStatus = false;
     }
 
+    public Seat getSeat(){
+        return this.seat;
+    }
+
     public boolean getValidationStatus(){   
         return this.validationStatus;
     }
@@ -26,6 +30,7 @@ public class Ticket{
         this.validationStatus = validationStatus;
     }
 
+    @Override
     public String toString(){
         return "|| Ticket -- PNR: "+this.ticketId+
                 ", emesso in data "+this.emissionDate+
