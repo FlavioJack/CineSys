@@ -4,14 +4,14 @@ import java.util.ArrayList;
 public class Catalog{
     ArrayList<Movie> movies;
     public Catalog(){
-        this.movies = new ArrayList<Movie>();
+        movies = new ArrayList<Movie>();
     }
 
     public void addMovie(Movie movie){
-        this.movies.add(movie);
+        movies.add(movie);
     }
     public void removeMovie(Movie movie){
-        this.movies.remove(movie);
+        movies.remove(movie);
     }
 
     public ArrayList<Movie> filterByTitle(String movieName){

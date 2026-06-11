@@ -20,11 +20,11 @@ public class Ticket{
     }
 
     public Seat getSeat(){
-        return this.seat;
+        return seat;
     }
 
     public boolean getValidationStatus(){   
-        return this.validationStatus;
+        return validationStatus;
     }
     public void setValidationStatus(boolean validationStatus){
         this.validationStatus = validationStatus;
@@ -32,9 +32,9 @@ public class Ticket{
 
     @Override
     public String toString(){
-        return "|| Ticket -- PNR: "+this.ticketId+
-                ", emesso in data "+this.emissionDate+
-                ", prezzo: "+this.ticketPrice+"€"+
+        return "|| Ticket -- PNR: "+ticketId+
+                ", emesso in data "+emissionDate+
+                ", prezzo: "+ticketPrice+"€"+
                 ", film: "+""+
                 ", posto: "+seat.getId()+" ||";
     }

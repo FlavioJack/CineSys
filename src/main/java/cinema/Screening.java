@@ -19,28 +19,28 @@ public class Screening{
     }
 
     public Movie getMovie(){
-        return this.movie;
+        return movie;
     }
     public void setMovie(Movie movie){
         this.movie = movie;
     }
 
     public Hall getHall(){
-        return this.hall;
+        return hall;
     }
     public void setHall(Hall hall){
         this.hall = hall;
     }
 
     public LocalDate getDate(){
-        return this.screeningDate; 
+        return screeningDate; 
     }
     public void setDate(LocalDate screeningDate){
         this.screeningDate = screeningDate;
     }
 
     public LocalTime getTime(){
-        return this.screeningTime; 
+        return screeningTime; 
     }
     public void setDate(LocalTime screeningTime){
         this.screeningTime = screeningTime;

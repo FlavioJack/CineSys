@@ -20,18 +20,18 @@ public class Hall{
     }
 
     public int getHallNumber(){
-        return this.hallNumber;
+        return hallNumber;
     }
     public void setHallNumber(int hallNumber){
         this.hallNumber = hallNumber;
     }
 
     public int getCapacity(){
-        return this.capacity;
+        return capacity;
     }
 
     public ArrayList<Seat> getSeatMap(){
-        return this.seats;
+        return seats;
     }
 
     public void showSeats(){

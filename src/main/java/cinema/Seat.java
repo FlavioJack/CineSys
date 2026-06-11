@@ -12,15 +12,15 @@ public class Seat{
     }
 
     public String getId(){
-        return this.seatId;
+        return seatId;
     }
 
     public char getRow(){
-        return this.row;
+        return row;
     }
 
     public int getColumn(){
-        return this.column;
+        return column;
     }
 
     @Override

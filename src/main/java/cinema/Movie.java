@@ -13,21 +13,21 @@ public class Movie{
     }
 
     public Genre getGenre(){
-        return this.genre;
+        return genre;
     }
     public void setGenre(Genre genre){
         this.genre = genre;
     }
 
     public Duration getDuration(){
-        return this.duration;
+        return duration;
     }
     public void setDuration(Duration duration){
         this.duration = duration;
     }
     
     public String getTitle(){
-        return this.title;
+        return title;
     }
     public void setTitle(String title){
         this.title = title;
