@@ -1,10 +1,10 @@
 package cinema;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 public class Ticket{
     String ticketId;
-    LocalDate emissionDate;
+    LocalDateTime emissionDate;
     boolean validationStatus;
     float ticketPrice;
     Screening screening;
@@ -12,7 +12,7 @@ public class Ticket{
 
     public Ticket(float ticketPrice, Screening screening, Seat seat){
         this.ticketId = UUID.randomUUID().toString();
-        this.emissionDate = LocalDate.now();
+        this.emissionDate = LocalDateTime.now();
         this.ticketPrice = ticketPrice;
         this.screening = screening;
         this.seat = seat;
@@ -33,10 +33,12 @@ public class Ticket{
     @Override
     public String toString(){
         return "|| Ticket -- PNR: "+ticketId+
-                ", emesso in data "+emissionDate+
+                ", emesso il "+emissionDate+
                 ", prezzo: "+ticketPrice+"€"+
-                ", film: "+""+
-                ", posto: "+seat.getId()+" ||";
+                ", film: "+screening.getMovie()+
+                ", posto: "+seat.getId()+
+                ", data e ora proiezione: "+screening.getDate()+
+                " "+screening.getTime()+" ||";
     }
 
 }
