@@ -47,16 +47,17 @@ public class Screening{
     }
 
     public boolean isSeatAvailable(Seat seat){
-        boolean available = false;
+        boolean isAvailable = true;
         for(Ticket t: soldTickets){
-            String bookedSeatId = t.getSeat().getId();
-            String bookingSeatId = seat.getId();
-            if(bookedSeatId.compareTo(bookingSeatId) == 0) // compareTo generates a number, like strcmp() in C <, > or == 0
-                available = false;
-            if(!available)
-                return available;
+            if(isAvailable){
+                String bookedSeatId = t.getSeat().getId();
+                String bookingSeatId = seat.getId();
+                if(bookedSeatId.compareTo(bookingSeatId) == 0) // compareTo generates a number, like strcmp() in C <, > or == 0
+                    isAvailable = false;
+            }
+            else return isAvailable;
         }
-        return available;
+        return isAvailable;
     }
     
 }
