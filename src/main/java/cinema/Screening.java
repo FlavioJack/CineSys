@@ -59,5 +59,12 @@ public class Screening{
         }
         return isAvailable;
     }
+
+    @Override//
+    public String toString(){
+        return getMovie()+" "+
+                getDate()+" "+
+                getTime();
+    }
     
 }

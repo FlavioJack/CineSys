@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class Catalog{
     ArrayList<Movie> movies;
     public Catalog(){
-        movies = new ArrayList<Movie>();
+        movies = new ArrayList<>();
     }
 
     public void addMovie(Movie movie){
@@ -27,15 +27,16 @@ public class Catalog{
         return movies.get(index-1);
     }
 
+    @Override
     public String toString(){
-        if(movies.size()==0)
+        if(movies.isEmpty())
             return "Il catalogo è vuoto";  
         else{
             int index=0;
             StringBuilder str = new StringBuilder("\n--- CATALOGO FILM ---\n");
             for(Movie m: movies){
                 index++;
-                str.append(index).append(". ").append(m.toString()).append("\n");
+                str.append("- ").append(m.toString()).append("\n");
             }
             return str.toString();
         }

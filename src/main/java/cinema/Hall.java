@@ -4,13 +4,13 @@ import java.util.ArrayList;
 public class Hall{
     int hallNumber;
     int capacity;
-    private ArrayList<Seat> seats;
+    private final ArrayList<Seat> seats;
 
     public Hall(int hallNumber, int rows, int columns){
         this.hallNumber = hallNumber;
         this.capacity = rows*columns;
         
-        seats = new ArrayList<Seat>();
+        seats = new ArrayList<>();
         for(int i=0; i<rows; i++){
             char r = (char)(i+65); 
             for(int j=1; j<=columns; j++){
