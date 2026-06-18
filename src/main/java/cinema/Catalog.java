@@ -35,7 +35,6 @@ public class Catalog{
             int index=0;
             StringBuilder str = new StringBuilder("\n--- CATALOGO FILM ---\n");
             for(Movie m: movies){
-                index++;
                 str.append("- ").append(m.toString()).append("\n");
             }
             return str.toString();

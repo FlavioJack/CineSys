@@ -13,9 +13,9 @@ public class Main{
         Movie film2 = new Movie("Toy Story 5", Duration.ofMinutes(102), Genre.ANIMATION);
         Movie film3 = new Movie("Supergirl", Duration.ofMinutes(110), Genre.ACTION);
         // Generate halls
-        Hall hall1 = new Hall(1, 5, 15);
-        Hall hall2 = new Hall(2, 7, 15);
-        Hall hall3 = new Hall(3, 6, 20);
+        Hall hall1 = new Hall(1, 5, 5);
+        Hall hall2 = new Hall(2, 7, 5);
+        Hall hall3 = new Hall(3, 6, 5);
         // Generate and fill catalog
         Catalog catalog = new Catalog();
         catalog.addMovie(film1);
