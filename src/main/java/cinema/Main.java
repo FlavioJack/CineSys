@@ -51,7 +51,21 @@ public class Main{
                         System.out.println(s);
                     }
                 }
-                //case 3 -> 
+                case 3 -> {
+                    System.out.print("Scegli una proiezione: ");
+                    int chosenScreening = Integer.parseInt(input.nextLine());
+                    Screening myScreening = schedule.get(chosenScreening-1);
+                    // Manage seat
+                    System.out.println(myScreening.getHall().showSeats());
+                    System.out.print("Scegli una posto: ");
+                    int chosenSeat = Integer.parseInt(input.nextLine());
+                    Seat mySeat = myScreening.getHall().getSeatMap().get(chosenSeat);
+                    if (myScreening.isSeatAvailable(mySeat)){
+                        //Ticket t = new Ticket(,,);
+                    }
+                    else System.out.println("Posto già prenotato");
+                    
+                }
                 case 4 -> exitVar = false;
                 default -> throw new AssertionError();
             }
