@@ -36,22 +36,28 @@ public class Main{
 
 
         // UI
+        Scanner input = new Scanner(System.in);
         boolean exitVar = true;
         while (exitVar) { 
+            System.out.println("\n==== MAIN MENU ====");
             System.out.println("1. Visualizza catalogo film");
             System.out.println("2. Visualizza le Proiezioni di oggi");
             System.out.println("3. Acquista biglietto");
             System.out.println("4. Esci");
-
-            Scanner input = new Scanner(System.in);
+            
+            System.out.print("Scegli menu: ");
             int choice = Integer.parseInt(input.nextLine());
 
             switch (choice) {
                 case 1 -> System.out.println(catalog);
                 case 2 -> { 
+                    StringBuilder str = new StringBuilder("\n--- PROIEZIONI ---\n");
+                    int index = 1;
                     for(Screening s: schedule){
-                        System.out.println(s);
+                        str.append(index).append(". ").append(s).append("\n");
+                        index++;
                     }
+                    System.out.println(str.toString());
                 }
                 case 3 -> {
                     System.out.print("Scegli una proiezione: ");
@@ -65,6 +71,7 @@ public class Main{
                     if (myScreening.isSeatAvailable(mySeat)){
                         Ticket t = new Ticket(ticketPrice,myScreening,mySeat);
                         myScreening.addSoldTicket(t);
+                        System.err.println(t);
                     }
                     else System.out.println("Posto già prenotato");
                 }
