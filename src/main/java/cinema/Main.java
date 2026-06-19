@@ -31,6 +31,8 @@ public class Main{
         schedule.add(screen2);
         schedule.add(screen3);
         schedule.add(screen4);
+        // Price
+        float ticketPrice = 8.50f;
 
 
         // UI
@@ -61,10 +63,9 @@ public class Main{
                     int chosenSeat = Integer.parseInt(input.nextLine());
                     Seat mySeat = myScreening.getHall().getSeatMap().get(chosenSeat);
                     if (myScreening.isSeatAvailable(mySeat)){
-                        //Ticket t = new Ticket(,,);
+                        Ticket t = new Ticket(ticketPrice,myScreening,mySeat);
                     }
                     else System.out.println("Posto già prenotato");
-                    
                 }
                 case 4 -> exitVar = false;
                 default -> throw new AssertionError();
