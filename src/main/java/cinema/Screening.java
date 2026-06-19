@@ -60,6 +60,10 @@ public class Screening{
         return isAvailable;
     }
 
+    public void addSoldTicket(Ticket ticket){
+        soldTickets.add(ticket);
+    }
+
     @Override//
     public String toString(){
         return getMovie()+" "+
