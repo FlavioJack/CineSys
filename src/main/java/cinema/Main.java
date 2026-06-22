@@ -61,13 +61,14 @@ public class Main{
                 }
                 case 3 -> {
                     System.out.print("Scegli una proiezione: ");
-                    int chosenScreening = Integer.parseInt(input.nextLine());
-                    Screening myScreening = schedule.get(chosenScreening-1);
+                    int inputVal = Integer.parseInt(input.nextLine()); // stores temp input value
+                    Screening myScreening = schedule.get(inputVal-1);
                     // Manage seat
-                    System.out.println(myScreening.getHall().showSeats());
+                    System.out.println(myScreening.getHall().showSeats()); 
+                    // implement numbered list getting the seats list
                     System.out.print("Scegli una posto: ");
-                    int chosenSeat = Integer.parseInt(input.nextLine());
-                    Seat mySeat = myScreening.getHall().getSeatMap().get(chosenSeat);
+                    inputVal = Integer.parseInt(input.nextLine());
+                    Seat mySeat = myScreening.getHall().getSeatMap().get(inputVal);
                     if (myScreening.isSeatAvailable(mySeat)){
                         Ticket t = new Ticket(ticketPrice,myScreening,mySeat);
                         myScreening.addSoldTicket(t);
@@ -80,8 +81,6 @@ public class Main{
             }
 
         }
-        
-        
         
     }
 }
