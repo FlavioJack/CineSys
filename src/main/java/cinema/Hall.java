@@ -4,14 +4,10 @@ import java.util.ArrayList;
 public class Hall{
     int hallNumber;
     int capacity;
-    int rows;
-    int columns;
     private final ArrayList<Seat> seats;
 
     public Hall(int hallNumber, int rows, int columns){
         this.hallNumber = hallNumber;
-        this.rows = rows;
-        this.columns = columns;
         this.capacity = rows*columns;
         
         seats = new ArrayList<>();
