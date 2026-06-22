@@ -72,7 +72,7 @@ public class Main{
                     if (myScreening.isSeatAvailable(mySeat)){
                         Ticket t = new Ticket(ticketPrice,myScreening,mySeat);
                         myScreening.addSoldTicket(t);
-                        System.err.println(t);
+                        System.out.println(t);
                     }
                     else System.out.println("Posto già prenotato");
                 }
