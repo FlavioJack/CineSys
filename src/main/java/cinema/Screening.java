@@ -64,7 +64,7 @@ public class Screening{
         soldTickets.add(ticket);
     }
 
-    @Override//
+    @Override
     public String toString(){
         return getMovie()+" "+
                 getDate()+" "+

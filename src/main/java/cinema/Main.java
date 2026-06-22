@@ -64,11 +64,14 @@ public class Main{
                     int inputVal = Integer.parseInt(input.nextLine()); // stores temp input value
                     Screening myScreening = schedule.get(inputVal-1);
                     // Manage seat
-                    System.out.println(myScreening.getHall().showSeats()); 
-                    // implement numbered list getting the seats list
+                    int index = 1;
+                    for(Seat s: myScreening.getHall().getSeatMap()){
+                        System.out.println("  "+index+" -> "+s.getColumn());
+                        index++;
+                    }
                     System.out.print("Scegli una posto: ");
                     inputVal = Integer.parseInt(input.nextLine());
-                    Seat mySeat = myScreening.getHall().getSeatMap().get(inputVal);
+                    Seat mySeat = myScreening.getHall().getSeatMap().get(inputVal-1);
                     if (myScreening.isSeatAvailable(mySeat)){
                         Ticket t = new Ticket(ticketPrice,myScreening,mySeat);
                         myScreening.addSoldTicket(t);
