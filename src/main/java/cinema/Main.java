@@ -65,11 +65,12 @@ public class Main{
                     Screening myScreening = schedule.get(inputVal-1);
                     // Manage seat
                     int index = 1;
+                    System.out.println("Elenco posti (digita numero a sinistra della freccia)");
                     for(Seat s: myScreening.getHall().getSeatMap()){
-                        System.out.println("  "+index+" -> "+s.getColumn());
+                        System.out.println("  "+index+". -> "+s.getId());
                         index++;
                     }
-                    System.out.print("Scegli una posto: ");
+                    System.out.print("Posto: ");
                     inputVal = Integer.parseInt(input.nextLine());
                     Seat mySeat = myScreening.getHall().getSeatMap().get(inputVal-1);
                     if (myScreening.isSeatAvailable(mySeat)){
