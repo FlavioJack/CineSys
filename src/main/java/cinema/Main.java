@@ -47,6 +47,10 @@ public class Main{
             
             System.out.print("Scegli menu: ");
             int choice = Integer.parseInt(input.nextLine());
+            while(!Main.checkValue(choice, 1, 4)){
+                System.out.print("Valore errato, inserisci un numero tra 1 e 4: ");
+                choice = Integer.parseInt(input.nextLine());
+            }
 
             switch (choice) {
                 case 1 -> System.out.println(catalog);
@@ -60,9 +64,16 @@ public class Main{
                     System.out.println(str.toString());
                 }
                 case 3 -> {
+                    // Manage screening
                     System.out.print("Scegli una proiezione: ");
                     int inputVal = Integer.parseInt(input.nextLine()); // stores temp input value
-                    Screening myScreening = schedule.get(inputVal-1);
+                    Screening myScreening = null;
+                    while(!Main.checkValue(inputVal, 1, schedule.size())){
+                        System.out.print("Valore errato, inserisci un numero tra 1 e "+schedule.size()+": ");
+                        inputVal = Integer.parseInt(input.nextLine());
+                    }
+                    myScreening = schedule.get(inputVal-1);
+
                     // Manage seat
                     int index = 1;
                     System.out.println("Elenco posti (digita numero a sinistra della freccia)");
@@ -72,7 +83,12 @@ public class Main{
                     }
                     System.out.print("Posto: ");
                     inputVal = Integer.parseInt(input.nextLine());
-                    Seat mySeat = myScreening.getHall().getSeatMap().get(inputVal-1);
+                    Seat mySeat = null;
+                    while(!Main.checkValue(inputVal, 1, myScreening.getHall().getSeatMap().size())){
+                        System.out.print("Valore errato, inserisci un numero tra 1 e "+myScreening.getHall().getSeatMap().size()+": ");
+                        inputVal = Integer.parseInt(input.nextLine());
+                    }
+                    mySeat = myScreening.getHall().getSeatMap().get(inputVal-1);
                     if (myScreening.isSeatAvailable(mySeat)){
                         Ticket t = new Ticket(ticketPrice,myScreening,mySeat);
                         myScreening.addSoldTicket(t);
@@ -86,5 +102,9 @@ public class Main{
 
         }
         
+    }
+
+    private static boolean checkValue(int value, int min, int max){ 
+        return (value>=min && value<=max) ? true : false;
     }
 }
